@@ -186,17 +186,17 @@ changePeriod=(value)=>{
     return (
       <View style={styles.root}>
         <Header style={styles.Top} text=' ' />
-        <Header style={styles.Header} text='🐽Lele的小账本🐽 ' />
+        <Header style={styles.Header} text='🐽LeleBill🐽 ' />
         <View style={{display:'flex',flexDirection:'row',justifyContent:'space-between', backgroundColor:'#ffffcc', borderBottomWidth:1}}>
         <View style={{  borderRightWidth:0.3, borderColor:'black',  display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: 5, textAlign: 'center', flex:1}}>
           <RNPickerSelect
             style={pickerStyle}
             items={this.pickerItem}
         
-            placeholder={{label:'🌈 选择月份...🔎',value:null,   }}
+            placeholder={{label:'🌈 Choose Month...🔎',value:null,   }}
             onValueChange={(value) =>{this.changePeriod(value)}}
           />
-          <Text style={{ paddingTop: 5, fontSize: 20, fontWeight: '600' }}>我们用了:💰{this.state.paidForSw+this.state.paidForLe} </Text>
+          <Text style={{ paddingTop: 5, fontSize: 20, fontWeight: '600' }}>We spent:💰{this.state.paidForSw+this.state.paidForLe} </Text>
         </View>
         <SummariesRow LeAmount={this.state.paidForSw} SwAmount={this.state.paidForLe}  />
         </View>
@@ -214,11 +214,11 @@ changePeriod=(value)=>{
           width={0.85}
           visible={this.state.showDialog}
           dialogAnimation={new SlideAnimation({ slideFrom: 'bottom' })}
-          dialogTitle={<DialogTitle title="心痛了吗？" textStyle={{ fontSize: 20 }} />}
+          dialogTitle={<DialogTitle title="Does it hurt？" textStyle={{ fontSize: 20 }} />}
           footer={
             <DialogFooter>
-              <DialogButton text="呜呜！我不记了！" key={1} textStyle={{ color: 'red' }} onPress={() => this.setState({ showDialog: false })} />
-              <DialogButton text="快乐记录" key={2} onPress={() => this.submitRecord()} />
+              <DialogButton text="Leave it！" key={1} textStyle={{ color: 'red' }} onPress={() => this.setState({ showDialog: false })} />
+              <DialogButton text="Record.." key={2} onPress={() => this.submitRecord()} />
             </DialogFooter>} >
 
           <DialogContent>
@@ -231,9 +231,9 @@ changePeriod=(value)=>{
                 { label: 'SW', value: '雪' },
               ]}
             />
-            <TextInput style={styles.input} placeholder='干了啥' onChangeText={text => this.setState({ currentCategory: text })} />
+            <TextInput style={styles.input} placeholder='What is this for' onChangeText={text => this.setState({ currentCategory: text })} />
             <Text />
-            <TextInput style={styles.input} placeholder='多少钱' onChangeText={text => this.setState({ currentAmount: parseFloat(text) })} keyboardType='number-pad' />
+            <TextInput style={styles.input} placeholder='Amount spent' onChangeText={text => this.setState({ currentAmount: parseFloat(text) })} keyboardType='number-pad' />
             <ScrollView style={styles.scroll} horizontal={true}>
               <TouchableOpacity style={{
                 width: 160,
@@ -635,7 +635,7 @@ const pickerStyle = StyleSheet.create({
 })
 
 const pickerPlaceholder = {
-  label: '谁出钱啦??', value: null, color: 'black'
+  label: 'Who paid??', value: null, color: 'black'
 }
 
 const pickerStyleB = StyleSheet.create({

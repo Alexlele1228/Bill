@@ -11,8 +11,8 @@ export const SummariesRow = (props) => {
   return (
     <View style={styles.main}>
      
-      <Summary style={styles.SummaryLe} owner='  蕾蕾‍😭 :' amount={'💰' + props.LeAmount} />
-      <Summary style={styles.SummarySw} owner='  雪😍 :' amount={'💰' + props.SwAmount} />
+      <Summary style={styles.SummaryLe} owner='  Rae😭 :' amount={'💰' + props.LeAmount} />
+      <Summary style={styles.SummarySw} owner='  Alex😍 :' amount={'💰' + props.SwAmount} />
     </View>
   )
 

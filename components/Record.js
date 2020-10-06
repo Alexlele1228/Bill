@@ -43,7 +43,7 @@ export const Record = (props) => {
                     <View style={{ marginLeft: 10, flex: 3, display: 'flex', flexDirection: "column", alignItems: 'left', justifyContent: 'center', paddingVertical: 5 }}>
                         <Text style={styles.Text}>{props.category}</Text>
                      
-                        <Text style={styles.TextTitle}>{props.who}支出😭</Text>
+                        <Text style={styles.TextTitle}>{props.who}paid😭</Text>
                         <Text style={styles.TextTitle}>{props.date.substring(5,18)}</Text>
                     </View>
                     <Text style={styles.TextPrice}> ￥{props.amount}</Text>
@@ -67,7 +67,7 @@ export const Record = (props) => {
 
                         <View style={{ marginLeft: 10, flex: 3, display: 'flex', flexDirection: "column", alignItems: 'left', justifyContent: 'center', paddingVertical: 5 }}>
                             <Text style={styles.Text}>{props.category}</Text>
-                            <Text style={styles.TextTitleB}>{props.who}支出😍</Text>
+                            <Text style={styles.TextTitleB}>{props.who}paid😍</Text>
                             <Text style={styles.TextTitleB}>{props.date.substring(5,18)}</Text>
                         </View>
                         <Text style={styles.TextPrice}> ￥{props.amount}</Text>
